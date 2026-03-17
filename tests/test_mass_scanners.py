@@ -266,6 +266,6 @@ class TestMassScannersCron(CustomTestCase):
         mock_response.raise_for_status.side_effect = requests.exceptions.HTTPError("500 Server Error")
         with patch("greedybear.cronjobs.mass_scanners.requests.get") as mock_get:
             mock_get.return_value = mock_response
-           # Expect exception to be raised now
+            # Expect exception to be raised now
             with self.assertRaises(requests.exceptions.HTTPError):
                 self.cron.execute()

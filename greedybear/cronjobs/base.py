@@ -20,7 +20,7 @@ class Cronjob(metaclass=ABCMeta):
             self.success = True
         except Exception as e:
             self.log.exception(e)
-            raise  # <--- this line ensures failures propagate
+            raise    # <--- this line ensures failures propagate
         finally:
             self.log.info("Finished execution")
            
