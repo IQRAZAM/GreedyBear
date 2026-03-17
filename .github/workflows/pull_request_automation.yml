@@ -49,7 +49,7 @@ jobs:
 
   backend-tests:
      needs: detect-changes
-     if: ${{ needs.detect-changes.outputs.backend > 0 }}
+     if: always()
      uses: ./.github/workflows/_python.yml
      secrets: inherit
      with:
