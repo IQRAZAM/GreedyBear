@@ -22,4 +22,5 @@ class Cronjob(metaclass=ABCMeta):
             self.log.exception(e)
             raise  #  <--- this line ensures failures propagate
         finally:
-             self.log.info("Finished execution")           
+            self.log.info("Finished execution")
+                      
