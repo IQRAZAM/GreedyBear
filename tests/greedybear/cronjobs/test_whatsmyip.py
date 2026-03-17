@@ -185,3 +185,4 @@ class WhatsMyIPTestCase(CustomTestCase):
 
         with self.assertRaises(requests.exceptions.HTTPError):
             cron.execute()
+            
